@@ -1,0 +1,61 @@
+import pandas as pd
+
+nba = pd.read_csv("nba.csv")
+
+nba = pd.read_csv("nba.csv")
+
+nba.head(1)
+
+nba.tail()
+
+nba.index
+
+nba.values
+
+nba.shape
+
+nba.dtypes
+
+nba.head()
+
+nba.columns
+
+nba.axes
+
+nba.info()
+
+nba.get_dtype_counts()
+
+
+Select Two or More Columns from A DataFrame
+----------------------------------------------
+nba = pd.read_csv("nba.csv")
+nba.head(3)
+nba[["Team", "Name"]].head(3)
+nba[["Number", "College"]]
+nba[["Salary", "Team", "Name"]].tail()
+
+
+
+adding new column  to DataFrame
+--------------------------------
+nba = pd.read_csv("nba.csv")
+nba.head(3)
+
+nba["Sport"] = "Basketball"
+nba.head(3)
+
+nba["League"] = "National Basketball Association"
+nba.head(3)
+
+nba = pd.read_csv("nba.csv")
+nba.head(3)
+
+nba.insert(3, column = "Sport", value = "Basketball")
+nba.head(3)
+
+nba.insert(7, column = "League", value = "National Basketball Association")
+Output = None
+
+
+Broadcasting Operations

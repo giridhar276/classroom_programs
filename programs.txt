@@ -1,0 +1,338 @@
+write a program to capture 2 numbers from the keybaord and display the sum
+-------------------------------------------------------
+write a program to capture some filename with extension from the keyboard and display its filename and extension seperately.
+
+Output:
+
+Enter any filename : abc.py
+filename : abc
+extension: py
+
+
+Also display the output in the below format
+Filename with extension : ABC.py
+-------------------------------------------------------
+write a program to capture the string "python programming" from the keyboard and 
+
+1)split the string to list
+Output:
+Enter any string : python programming
+List values are  : ["python","programming"]
+
+2) replace python to java and display the string
+-------------------------------------------------------
+
+define empty list and perform below operations
+1) append 100 to the list
+2) append 300 to the list
+3) add 30,40,60,20,10,100,30,40,10,50 to the list
+4) remove all the duplicates of the list
+5) count the no. of occurences of 100 in the list
+6) sort all the numbers in the ascending order
+7) remove 60 from the list
+8) convert list to the set and display the output
+
+
+----------------------------------------------------------------------------
+
+write  a program to capture string from keyboard and display as below
+string is too short if the length of the string is < 5 
+string is too long if the length of the string is >30
+----------------------------------------------------------------------------
+write a program to string from the keyboard and 
+
+convert the string into lowercase if the string is upper
+convert the string into uppercase if the string is lower.
+
+----------------------------------------------------------------------------
+define list as below and display all the unique elements of the list and length of
+the list
+
+alist = ["google.com","unix.com","facebook.com","google.com","linkedin.com"]
+Output :
+[10,8,12,12]
+----------------------------------------------------------------------------
+
+
+write a program to capture the input as below and convert into list
+
+Enter any string : unix,java,oracle,hadoop
+
+Output:
+['unix','java','oracle','hadoop']
+
+
+----------------------------------------------------------------------------
+
+
+write a program to display the series of IP addresses in the below format.
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+...
+...
+192.168.0.100
+
+------------------------------------------------------------------------
+write a program to display the series of IP addresses in the below format.
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+...
+...
+192.168.0.100
+
+
+--------------------------------------------------------------------------
+write a program to display the IPs in the below format.
+172.168.0.1
+172.168.0.2
+172.168.0.3
+...
+...
+172.168.0.10
+172.168.1.1
+172.168.1.2
+172.168.1.3
+...
+...
+172.168.1.10
+
+------------------------------------------------------------------------
+Write a program to check the validity of password input by user.
+Following are the criteria for checking the password:
+
+1. At least 1 character from [$#@]
+2. Minimum length of transaction password: 6
+3. Maximum length of transaction password: 12
+
+
+display "Valid password" if all the conditions are 
+satisfied or "Invalid password"
+
+
+
+
+
+
+--------------------------------------------------------------------------
+
+write a program to capture any string from keyboard and write the output to the file
+
+--------------------------------------------------------------------------
+
+write a program to write all the odd numbers from 500 to 600 the file
+
+--------------------------------------------------------------------------
+
+write a program to display all the lines from the "realestate.csv" file
+--------------------------------------------------------------------------
+write a a program to display the count of lines
+
+Output:
+Total no. of lines  :  xxxx
+--------------------------------------------------------------------------
+write a program to display all the unique cities from the file.
+--------------------------------------------------------------------------
+
+write a program to write the output to another file where price is greater than 100000.
+--------------------------------------------------------------------------
+write a program to the display all the lines matching the below criteria.
+
+city is SACRAMENTO or RIO LINDA
+type is Residential or Condo
+no. of beds is 2
+no. of baths is 2
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+write a program to display only even numbers from 200 to 100 using for loop.
+------------------------------------------------------------------------
+
+With a given list [12,24,35,24,88,120,155,88,120,155], 
+write a program to print this list after removing all duplicate values with original order.
+
+
+
+
+
+------------------------------------------------------------------------
+write a program to print the list after removing the value 24 in [12,24,35,24,88,120,155]
+
+Output :
+[12,35,88,120,155]
+
+
+------------------------------------------------------------------------
+
+write a program to display to all the odd numbers from 900 to 800 to the file
+
+- create the file in same path
+- create the file on Desktop(as below)
+  fobj = open("C:\\Users\\Admin\\Desktop\\numbers.txt","w")
+  (or)
+  fobj = open("C:/Users/Admin/Desktop/numbers.txt","w")
+------------------------------------------------------------------------
+
+
+write a program to capture your name from the keyboard and write the output to the file
+
+------------------------------------------------------------------------
+
+write a program to display all the lines from the realestate.csv file
+------------------------------------------------------------------------
+write a program to display only street and city columns from the file
+------------------------------------------------------------------------
+write a program to display all the distinct cities from the file
+------------------------------------------------------------------------
+
+write a program to read realestate.csv and copy all the lines to'realestatebkp.csv' where price is greater than 90000.
+------------------------------------------------------------------------
+write a program to display the count of the people who are staying in RIO LINDA city
+------------------------------------------------------------------------
+
+write a program to copy 
+
+lines 1 - 100 to  file1.csv
+lines 101 - 200 to file2.csv
+..
+..
+..
+lines 501 - 600 to file5.csv
+
+ 
+
+
+
+
+
+
+
+
+
+write a program to list all the files and directories in the current path
+------------------------------------------------------------------------
+write a program to list all the files available on the Desktop
+------------------------------------------------------------------------
+write a program to display the currentusername 
+------------------------------------------------------------------------
+write a program to display only .py from the current directory
+------------------------------------------------------------------------
+write a program to display only files and its size
+------------------------------------------------------------------------
+write a program to create file with today's timestamp.(output : 19_Dec_2018.csv)
+------------------------------------------------------------------------
+write a program to display all the files and directories seperately
+Output :
+
+files
+-----
+a.txt
+b.txt
+
+directories
+----------
+dir1
+dir2
+
+----------------------------------------------------------------------
+
+
+https://notepad.pw/h1z8fiyt
+---------------------------
+
+
+
+write a program to write all the numbers from 1 to 100 to the excel with today's timestamp.
+
+19_Nov_2018.xlsx
+
+------------------------------------------------------
+write a program to read realestate.csv and convert it to realestate.xlsx
+------------------------------------------------------
+write a program to create 100 directories in the current path
+------------------------------------------------------
+
+write a program to create a excelfile contains
+all the files and its size.
+------------------------------------------------------
+
+write a program to display the billnumber, mobilenumber,billdate aand amount from the xml file.
+
+------------------------------------------------------
+
+write a menu based program as below
+
+1) display information(billnumber,mobile,billdate,amount) of all the customer
+2) display only billnumber and the mobile information
+3) query whether mobile number exists or not.
+   ( capture mobile number as input from keyboard and check whether mobile
+     number exists or not )
+4) display the information of the customers whose bill amount is > 5000
+4) Exit the program
+
+
+write an object oriented program with the below options
+1) display information(billnumber,mobile,billdate,amount) of all the customer
+2) display only billnumber and the mobile information
+3) query whether mobile number exists or not.
+   ( capture mobile number as input from keyboard and check whether mobile
+     number exists or not )
+4) display the information of the customers whose bill amount is > 5000
+4) Exit the program
+
+
+
+write a python program to get all the values from the command line and display its sum
+
+Eg:
+C:\Admin>python addelements.py 10 20 30 40 50 60 70 80
+SUm of the numbers : 400
+
+
+
+ 
+Write a Python program that accepts a string and calculate the number of digits 
+and letters.
+
+
+
+
+Write a Python program to construct the following pattern, using a nested for loop.
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+
+write a program to read realestate.csv and 
+insert into database .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+display all databases
+--------------------
+show databases ;
+
+creating database
+----------------
+create database synechron;
+
+show all existing databases
+--------------
+show databases ;
+
+navigate to the database
+------------------------
+use synechron;
+
+display all tables in the synechron database
+-----------------------------------------
+show tables ;
+
+create table
+---------------
+create table tutorials( tutorial_id INT  , tutorial_title VARCHAR(100) ,tutorial_author VARCHAR(40));
+
+insert into tutorials values(1,"perl","John");
+insert into tutorials values(2,"unix","Robert");
+insert into tutorials values(3,"java","Gita");
+insert into tutorials values(4,"dotnet","siva");
+insert into tutorials values(5,"golang","Rita");
+

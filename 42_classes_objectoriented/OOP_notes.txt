@@ -1,0 +1,599 @@
+
+What is object in python?
+-----------------------------
+Everything in Python is an object, and almost everything has attributes and methods.
+All functions have a built-in attribute __doc__, which returns the doc string defined in the function's source code.
+
+
+OOPs principles
+----------------
+OOps are the rules or guidelines which are supposed to be satisfied by any programming language in order to call that programming language as OOPL.
+
+different OOPs principles are
+
+1.Encapsulation
+2. Inheritance
+3. POlymorphism
+4. Abstraction.
+
+
+Encapsulation
+--------------
+The concept of binding or grouping related data members along with its related functionalities is known as ecapsulation.
+
+
+## customer
+
+attributes : cname , cadd, caccountno , cbal
+
+class Banking:
+	def deposit(self):
+	    ##
+	    ##
+
+	def withdraw(self):
+	    ##
+	    ##
+	def transfer(self):
+	    ##
+    	    ##
+
+
+
+## Employee
+attributess : ename, eadd, eid, esal ...
+
+def da(self):
+    ##
+    ##
+
+def hra(self):
+    ##
+    ##
+    ##
+
+def tax(self):
+    ##
+    ##
+
+class
+------
+
+class is a syntax or structure used to bind or group the related data members along with its related functionality.
+
+	
+class classname:
+    ##
+    ##
+    ##
+
+
+#  within the class , we can represent data by using static variables and non static varaibles
+
+
+
+static variables ( class variables)
+------------------------------------
+The variables which are declared within the class outside of all the methods are known as static variables or class variables.
+
+The data which is common for every object is recommended to represent by using static variable.
+
+For all the static variables of a class , memory will be allocated only once.
+
+Static varaible of one class we can access within the same class Or outside of the class by using class name
+
+
+Example:
+
+class x:
+    i = 1000
+    def m1(self): 
+      
+	 
+
+x1 = x()
+x1.m1()
+print x.i
+ 
+
+
+non static variables
+----------------------
+
+The variables which are declared with self or reference variables are known as non static variable or instance variable
+
+Non static variables we can define within the constructores or within the method
+
+The data which is seperated for every object is recommended to represent by using non static variable.
+
+for all the non-static variables of a class , memory will be allocated whenevery we create object.
+
+with respect to every object creation statement seperate copy of the memory will be allocated for non static variables.
+
+Non static variable of one class, we can access within the same class by using self keyword.
+
+Example :
+class y:
+    def m1(self):
+        self.i = 100
+        self.j = 123.34
+
+    def display(self):
+        print self.i
+        print self.j
+
+y1 = y()
+y2 = y()
+ 
+y1.i = 200
+y1.j = 345.454
+y1.display()
+
+y2.i = 300
+y2.j = 345.65
+y2.display()
+
+
+constructor
+---------------
+
+It is a special kind of method which executes automaticaly whenver we create object
+
+Contructors are used to initialize the non-static variables of the class at the time of creattion of object with the user defined value.
+
+Eg:
+
+class Z:
+    def __init__(self):
+        print "this is contructor"
+
+z1 = Z()
+
+Example2:
+------------
+
+
+class Z:
+    def __init__(self,i,j):
+        self.i = i
+        self.j = j
+    
+z1 = Z(100,34.5)
+print z1.i
+print z1.j
+
+z2 = Z(345,56.6)
+print z2.i
+print z2.j
+
+
+
+
+
+Object
+------
+The concept of allocating memory space for non-static variable of a class at runtime dynamically is known as an object
+
+We can create 'n' of objects for one class
+
+After creating the object,  address of object will stored in variable and we call that  variable as a reference variable.
+
+From that variable we can put the data into object.
+
+Adding static and non-static variables to the class and object from outside of class.
+
+
+class x:
+    def __init__(self,i,j):
+        self.i = i
+        self.j = j
+
+    def display(self):
+	print self.i
+        print self.j
+
+x1 = x(100,200)
+print x1
+print id(x1)
+x1.display()
+
+
+x2 = x(300,400)
+print x2
+print id(x2)
+x2.display()
+
+
+
+default attributes (or) namespaces
+-------------------------------------
+
+With respect to every class some attributes are added automatically and we call those attributes as a default attributes.
+
+The default attributes which are added to each and every class are
+
+__dict__
+__doc__
+__name__
+__module__
+__bases__
+
+
+
+class demo:
+   """test program"""
+   a = 1000
+   def __init__(self):
+      self.b = 200
+
+print demo.a
+print demo.__name__
+print demo.__module
+print demo.__dict__
+print demo.__bases__
+
+
+
+Garbage collection
+---------------------
+
+The concept of removing the unused, unreferenced object from the memory location is known as a garbage colletion.
+
+Once the garbage collection is over memory will become free and rest of the program execution takes place in faster manner
+
+There are two types of garbage collection supported by python they are.
+
+1. automatic garbage collection
+2. explicit garbage collection
+
+
+Automatic garbage collection
+------------------------------
+
+After starting execution of program periodically garbage collector program runs internally.
+
+Whenever garbage collector program is running if any unused unreferrenced objects are available in memory location then it will remove those objects from memory location
+
+Whenevery any object is going to be removed from memory location then destructor of that class is going to be executed .
+
+In destructor we will write the resource deallocation statement.
+
+
+Eg:
+
+class x:
+   a = 1000
+   def __init__(self):
+      print "In constructor"
+
+   def __del__(self):
+      print "In destructor"
+
+x1 = x()
+x2 = x()
+
+
+Explicit GC
+------------
+
+The concept of executing the garbage collection program explicitly whenever we require is known as explicit garbage colleciton.
+
+By using del keyword we can run garbage collector explicitly.
+
+
+class Demo:
+   a = 1000
+   def __init__(self):
+      print "In constructor"
+   def __del__(self):
+      print "In desctructor"
+
+
+d1 = Demo()
+del d1			# EXPLICIT garbage collector
+
+
+
+class X:
+   a = 1000
+   def __init__(self):
+      print "In constructor"
+   def __del__(self):
+      print "In destructor"
+
+x1 = X()
+x2 = X()
+x3 = X()
+
+del x3			# seperate object is not created but the address of x1 is given to x2 or x3
+del x2
+del x1
+
+
+
+
+
+
+Inheritance
+------------
+The concept of using properties of one class into another class without creating object  of that class explicitly is known as inheritance
+
+
+A class which is extended by another class is kwown as super class
+
+A class which is extending another class is known as subclass
+
+Both super class properties and subprocess properties can be accessed through subclass ref variable.
+
+Example:
+
+class x:
+    def m1(self):
+        self.i = 1000
+
+class y(x):
+    def m2(self):
+        self.j = 2000
+
+y1 = y()
+y1.m1()
+y1.m2()
+print y1.i
+print y1.j
+
+
+
+
+
+superclass properties direcly can be accessed within the subclass..
+
+
+class x:
+    def m1(self):
+        self.i = 1000
+
+class y:
+    def m2(self):
+        self.j = 2000
+
+    def display(self):
+        print self.i
+        print self.j
+
+y1 = y()
+y1.m1()
+y1.m2()
+y1.display()	
+
+
+
+
+
+Types of Inheritance
+----------------------
+
+
+single Inheritance
+-------------------
+The concept of  inheriting properties from only one class into another class is known as single inheritance
+
+
+class x:
+   def m1(self):
+      print "In m1 of x"
+
+class y(x):
+   def m2(self):
+      print "In m2 of y"
+
+y1 = y()
+y1.m1()
+y1.m2()
+
+
+multilevel Inheritance
+-----------------------------
+The concept of inheriting properites from multiple classes into single class with the concept of one after another is known as multileel inheritance
+
+## multilevel
+
+class x:
+    def m1(self):
+        print "In method1 of X"
+
+
+class y(x):
+    def m2(self):
+        print "In method2 of Y"
+
+class z(y):
+    def m3(self):
+        print "In method3 of Z"
+
+
+z1 = z()
+
+z1.m1()
+
+z1.m2()
+
+z1.m3()
+
+
+
+Hirarchical Inheritance
+----------------------------
+The concept of inheriting properites from one class into multiple classes is known as hierarchical inheritance
+
+
+class x:
+    def m1(self):
+        print "In method1 of X"
+
+
+class y(x):
+    def m2(self):
+        print "In method2 of Y"
+
+class z(x):
+    def m3(self):
+        print "In method3 of Z"
+
+y1 = y()
+y1.m1()
+y1.m2()
+z1 = z()
+z1.m1()
+z1.m3()
+
+
+
+Multiple Inheritance
+-----------------------------
+The concept of inheriting properties from multiple classes into single class at a time is known as multiple inheritance
+
+
+class x:
+    def m1(self):
+        print "In method1 of X"
+
+
+class y(x):
+    def m2(self):
+        print "In method2 of Y"
+
+class z(x,y):
+    def m3(self):
+        print "In method3 of Z"
+
+z1 = z()
+z1.m1()
+z1.m2()
+z1.m3()
+y1 = y()
+y1.m2()
+x1 = x()
+x1.m1()
+
+ 
+
+
+
+Polymorphism
+--------------
+
+poly means many and morphism means forms
+
+forms menas functionalities or logics
+
+The concept of defining multiple logics to perform same operation is known as polymorphism
+
+polymorphism can be implemented in python by using method overriding
+
+Python doesn't support class leveel method overloading
+
+
+method overloading
+----------------------
+
+The concept of defnining multiple methods with the same name , different no. of parameters with in a same class is known as method overloading
+
+
+
+class x:
+   def m1(self,a):
+      print "with one parameter of x"
+   def m1(self,a,b):
+      print "with two parameters of x"
+
+x1 = x()
+x1.m1(100,200)
+x1.m1(100)      ######### error message #######
+
+
+
+class y:
+   def m1(self, *args):
+      for p in args:
+         print p
+
+y1 = y()
+y1.m1(10,20)
+y1.m1(100,200,300)
+y1.m1("satya","hyd","amp")
+
+
+
+Method overriding
+-------------------------
+The concept of defining multiple methods with the same name with the same no. of parameters. 
+One is in superclass and another in subclass is known as method overriding
+
+
+class parent:
+   def myMethod(self):
+      print "Calling parent method"
+
+class child(parent):
+   def myMethod(self):
+      print "Calling child method"
+
+
+c = child()
+c.myMethod()
+p = parent()
+p.myMethod()
+
+
+super()  ------------------> when method overriding
+--------
+
+
+class parent(object):
+   def altered(self):
+      print "Parent altered"
+
+class child(parent):
+   def altered(self):
+      print "child before parent altered"
+  
+   super(child,self).altered()
+   print "Child after parent altered"
+
+
+dad = parent()
+son = child()
+
+dad.altered()
+son.altered()
+
+
+
+Abstraction or data hiding
+-------------------------------
+
+The concept of hiding hte pro. of once class from the other class or other programs directly is known as data hiding or abstraction.
+
+
+
+class x:
+   __p = 1000
+def m1(self):
+   print "In m1 of x"
+
+x1 = x()
+x1.m1()
+print x1.p()
+
+
+Output:
+In m1 of x
+error ( p not found)
+
+
+
+
+
+
+
+
